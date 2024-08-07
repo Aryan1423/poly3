@@ -26,7 +26,7 @@ const config: HardhatUserConfig = {
   networks: {
     sepolia: {
       url: 'https://rpc.sepolia.org',
-      accounts: [`0x${process.env.PRIVATE_KEY}`],
+      accounts: ["6806ab112638ecb619f66fc7a62d758f8bc8c23507c85162a8877a46dc534c39"],
     },
   },
   circom: {
