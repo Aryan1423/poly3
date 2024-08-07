@@ -81,16 +81,20 @@ component main = CustomCircuit();
 
 The following actions should be taken in order to manage the project:
 
-Install the Metamask wallet on your browser first.
+ 1.Install the Metamask wallet on your browser first.
+
 2. You need to add the sepolia test network in Metamask. To add this, navigate to the chainlist website (https://chainlist.org/?testnets=true), click the "Use Metamask" button, and confirm that the "Include Testnets" checkbox is enabled in the pop-up window that appears. Next, use the 'Search Networks' input field to look up the 11155111 chain ID. After adding the network to Metamask, click the 'Approve' button in the Metacrafters pop-up window. We have incorporated the Network to our metamask wallet.
+
 3. on order to operate the project, we now require testnet tokens on the network. To obtain the testnet tokens for Sepolia in the network, visit https://cloud.google.com/application/web3/faucet/ethereum/sepolia.
+
 4. Clone the Github repository on your Github account, making sure all of the files are there.
-5. Make a copy of your Github repository's URL.
-6. Launch Gitpod by clicking on New Workspace, pasting the repository link, and clicking "continue." The workspace will launch on the VS-CODE desktop or browser.
-7. Type `npm i} in the terminal while in the project directory, then wait for it to finish. If you use gitpod, this step is not required because gitpod installs all dependencies immediately when it opens.
-8. Insert the private key into the.env file. Your metamask wallet is where you will find your private key.
-9. Execute {npx hardhat circom}. This will produce the **MultiplierVerifier.sol** contract and the **out** file with circuit intermediaries.
-10. Execute the script `npx hardhat run scripts/deploy.ts`. This script does four tasks.  
+
+5. Launch Gitpod by clicking on New Workspace, pasting the repository link, and clicking "continue." The workspace will launch on the VS-CODE desktop or browser.
+
+9. Type `npm i` in the terminal while in the project directory, then wait for it to finish. If you use gitpod, this step is not required because gitpod installs all dependencies immediately when it opens.
+
+10. Execute {npx hardhat circom}. This will produce the **MultiplierVerifier.sol** contract and the **out** file with circuit intermediaries.
+11. Execute the script `npx hardhat run scripts/deploy.ts`. This script does four tasks.  
    - Uses `generateProof()} to create a proof from circuit intermediaries -Uses `generateCallData()} to create calldata -Deploys the `MultiplierVerifier.sol} contract
    - Uses calldata to invoke `verifyProof()} on the verifier contract.
 11. Copy the address that says "Verifier deployed to" from the terminal and search it on the https://sepolia.etherscan.io/ testnet explorer. If you notice the Transaction of Contract Creation, it indicates that our script is operating well.
